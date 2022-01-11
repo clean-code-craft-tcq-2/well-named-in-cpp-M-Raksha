@@ -18,3 +18,13 @@ void testPairToNumber(TelCoColorCoder::MajorColor major, TelCoColorCoder::MinorC
      std::cout << "Got pair number " << pairNumber << std::endl; 
      assert(pairNumber == expectedPairNumber); 
 }
+
+void PrintManual()
+{
+    for(int i =1; i<=25;i++)
+    {
+        TelCoColorCoder::ColorPair printclr = TelCoColorCoder::GetColorFromPairNumber(i);
+        std::cout<<i<<"   "<<printclr.ToString()<<std::endl;
+    }
+}
+ 
