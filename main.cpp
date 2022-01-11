@@ -2,7 +2,13 @@
 #include <assert.h>
 #include"declarations.h"
 
-
+namespace TelCoColorCoder 
+{ 
+const char* MajorColorNames[] = {"White", "Red", "Black", "Yellow", "Violet" }; 
+int numberOfMajorColors = sizeof(MajorColorNames) / sizeof(MajorColorNames[0]); 
+const char* MinorColorNames[] = { "Blue", "Orange", "Green", "Brown", "Slate"}; 
+int numberOfMinorColors = sizeof(MinorColorNames) / sizeof(MinorColorNames[0]); 
+	
 ColorPair GetColorFromPairNumber(int pairNumber) 
 { 
         int zeroBasedPairNumber = pairNumber - 1; 
@@ -17,7 +23,7 @@ int GetPairNumberFromColor(TelCoColorCoder::MajorColor major, TelCoColorCoder::M
          return major * numberOfMinorColors + minor + 1; 
 } 
 
-
+}
 
 int main() {
     testNumberToPair(4, TelCoColorCoder::WHITE, TelCoColorCoder::BROWN);
