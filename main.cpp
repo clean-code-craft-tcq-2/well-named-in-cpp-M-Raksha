@@ -1,12 +1,12 @@
 #include <iostream>
 #include <assert.h>
 #include"declarations.h"
-
+using namespace TelCoColorCoder;
 
 ColorPair GetColorFromPairNumber(int pairNumber) 
 { 
         int zeroBasedPairNumber = pairNumber - 1; 
-         TelCoColorCoder::MajorColor majorColor =  (MajorColor)(zeroBasedPairNumber / numberOfMinorColors); 
+        TelCoColorCoder::MajorColor majorColor =  (MajorColor)(zeroBasedPairNumber / numberOfMinorColors); 
         TelCoColorCoder::MinorColor minorColor = (MinorColor)(zeroBasedPairNumber % numberOfMinorColors); 
 		
         return ColorPair(majorColor, minorColor);
