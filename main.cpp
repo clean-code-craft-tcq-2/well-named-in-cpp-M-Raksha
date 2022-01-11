@@ -1,7 +1,7 @@
 #include <iostream>
 #include <assert.h>
 #include"declarations.h"
-using namespace TelCoColorCoder;
+
 
 ColorPair GetColorFromPairNumber(int pairNumber) 
 { 
